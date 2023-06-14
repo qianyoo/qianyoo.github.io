@@ -1,198 +1,584 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>浅言 - 浅言的随记.</title><meta name="author" content="浅言"><meta name="copyright" content="浅言"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="浅言的随记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="浅言">
-<meta property="og:url" content="https://qianyoo.github.io/index.html">
-<meta property="og:site_name" content="浅言">
-<meta property="og:description" content="浅言的随记">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://qianyoo.github.io/img/avatar.png">
-<meta property="article:author" content="浅言">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://qianyoo.github.io/img/avatar.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://qianyoo.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-    },
-    fancybox: {
-      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isanchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2022-12-13 22:50:15'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
-
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>浅言 - 浅言的随记.</title>
+    <meta name="author" content="浅言">
+    <meta name="copyright" content="浅言">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="浅言的随记">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="浅言">
+    <meta property="og:url" content="https://qianyoo.github.io/index.html">
+    <meta property="og:site_name" content="浅言">
+    <meta property="og:description" content="浅言的随记">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="https://qianyoo.github.io/img/avatar.png">
+    <meta property="article:author" content="浅言">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://qianyoo.github.io/img/avatar.png">
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="canonical" href="https://qianyoo.github.io/">
+    <link rel="preconnect" href="//cdn.jsdelivr.net"/>
+    <link rel="preconnect" href="//busuanzi.ibruce.info"/>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"
+          media="print" onload="this.media='all'">
+    <style type="text/css">
+        .sprite {
+            display: inline-block;
+            margin-right: 3px;
+            background-image: url(https://s1.hdslb.com/bfs/seed/jinkela/footer-v2/images/hz_icon.png);
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            background-position: -41px 0px;
         }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
+    </style>
+    <script>const GLOBAL_CONFIG = {
+        root: '/',
+        algolia: undefined,
+        localSearch: undefined,
+        translate: undefined,
+        noticeOutdate: undefined,
+        highlight: {"plugin": "highlighjs", "highlightCopy": true, "highlightLang": true},
+        copy: {
+            success: '复制成功',
+            error: '复制错误',
+            noSupport: '浏览器不支持'
+        },
+        relativeDate: {
+            homepage: false,
+            post: false
+        },
+        runtime: '天',
+        date_suffix: {
+            just: '刚刚',
+            min: '分钟前',
+            hour: '小时前',
+            day: '天前',
+            month: '个月前'
+        },
+        copyright: undefined,
+        lightbox: 'fancybox',
+        Snackbar: undefined,
+        source: {
+            jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+            justifiedGallery: {
+                js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+                css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+            },
+            fancybox: {
+                js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+                css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+            }
+        },
+        isPhotoFigcaption: false,
+        islazyload: false,
+        isanchor: false
+    }</script>
+    <script id="config-diff">var GLOBAL_CONFIG_SITE = {
+        isPost: false,
+        isHome: true,
+        isHighlightShrink: false,
+        isToc: false,
+        postUpdate: '2022-12-13 22:50:15'
+    }</script>
+    <noscript>
+        <style type="text/css">
+            #nav {
+                opacity: 1
+            }
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
+            .justified-gallery img {
+                opacity: 1
+            }
 
-        if (!itemStr) {
-          return undefined
+            #recent-posts time,
+            #post-meta time {
+                display: inline !important
+            }
+        </style>
+    </noscript>
+    <script>(win => {
+        win.saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0) return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay,
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
         }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
+        win.getScript = url => new Promise((resolve, reject) => {
+            const script = document.createElement('script')
+            script.src = url
+            script.async = true
+            script.onerror = reject
+            script.onload = script.onreadystatechange = function () {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+            }
+            document.head.appendChild(script)
+        })
+
+        win.activateDarkMode = function () {
+            document.documentElement.setAttribute('data-theme', 'dark')
+            if (document.querySelector('meta[name="theme-color"]') !== null) {
+                document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+            }
         }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        win.activateLightMode = function () {
+            document.documentElement.setAttribute('data-theme', 'light')
+            if (document.querySelector('meta[name="theme-color"]') !== null) {
+                document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+            }
         }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        const t = saveToLocal.get('theme')
+
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+
+        const asideStatus = saveToLocal.get('aside-status')
+        if (asideStatus !== undefined) {
+            if (asideStatus === 'hide') {
+                document.documentElement.classList.add('hide-aside')
+            } else {
+                document.documentElement.classList.remove('hide-aside')
+            }
         }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    })(window)</script><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="浅言" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/img/index.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">浅言</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">浅言</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/qianyoo" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/09/10/IDEA%20%E8%BF%9C%E7%A8%8Bdebug/" title="IDEA 远程debug">     <img class="post_bg" src="/img/%E5%BC%A0%E4%BC%9F-%E8%AF%B7%E5%9D%90.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IDEA 远程debug"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/09/10/IDEA%20%E8%BF%9C%E7%A8%8Bdebug/" title="IDEA 远程debug">IDEA 远程debug</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-10T01:21:00.000Z" title="发表于 2021-09-10 09:21:00">2021-09-10</time></span></div><div class="content">IDEA 远程debug模式使用记录
- jar包启动时添加启动参数    端口号 8888为自己设置的
+    })(window)</script>
+    <meta name="generator" content="Hexo 6.0.0">
+    <link rel="alternate" href="/atom.xml" title="浅言" type="application/atom+xml">
+</head>
+<body>
+<div id="sidebar">
+    <div id="menu-mask"></div>
+    <div id="sidebar-menus">
+        <div class="author-avatar"><img class="avatar-img" src="/img/avatar.png"
+                                        onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div>
+        <div class="site-data">
+            <div class="data-item is-center">
+                <div class="data-item-link"><a href="/archives/">
+                    <div class="headline">文章</div>
+                    <div class="length-num">6</div>
+                </a></div>
+            </div>
+            <div class="data-item is-center">
+                <div class="data-item-link"><a href="/tags/">
+                    <div class="headline">标签</div>
+                    <div class="length-num">2</div>
+                </a></div>
+            </div>
+        </div>
+        <hr/>
+        <div class="menus_items">
+            <div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a>
+            </div>
+            <div class="menus_item"><a class="site-page" href="/archives/"><i
+                    class="fa-fw fas fa-archive"></i><span> 归档</span></a></div>
+            <div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a>
+            </div>
+            <div class="menus_item"><a class="site-page" href="/about/"><i
+                    class="fa-fw fas fa-heart"></i><span> About</span></a></div>
+        </div>
+    </div>
+</div>
+<div class="page" id="body-wrap">
+    <header class="full_page" id="page-header" style="background-image: url('/img/index.jpeg')">
+        <nav id="nav"><span id="blog_name"><a id="site-name" href="/">浅言</a></span>
+            <div id="menus">
+                <div class="menus_items">
+                    <div class="menus_item"><a class="site-page" href="/"><i
+                            class="fa-fw fas fa-home"></i><span> 首页</span></a></div>
+                    <div class="menus_item"><a class="site-page" href="/archives/"><i
+                            class="fa-fw fas fa-archive"></i><span> 归档</span></a></div>
+                    <div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a>
+                    </div>
+                    <div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a>
+                    </div>
+                </div>
+                <div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div>
+            </div>
+        </nav>
+        <div id="site-info"><h1 id="site-title">浅言</h1>
+            <div id="site_social_icons"><a class="social-icon" href="https://github.com/qianyoo" target="_blank"
+                                           title="Github"><i class="fab fa-github"></i></a></div>
+        </div>
+        <div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div>
+    </header>
+    <main class="layout" id="content-inner">
+        <div class="recent-posts" id="recent-posts">
+            <div class="recent-post-item">
+                <div class="post_cover left_radius"><a href="/2021/09/10/IDEA%20%E8%BF%9C%E7%A8%8Bdebug/"
+                                                       title="IDEA 远程debug"> <img class="post_bg"
+                                                                                  src="/img/%E5%BC%A0%E4%BC%9F-%E8%AF%B7%E5%9D%90.jpg"
+                                                                                  onerror="this.onerror=null;this.src='/img/404.jpg'"
+                                                                                  alt="IDEA 远程debug"></a></div>
+                <div class="recent-post-info"><a class="article-title"
+                                                 href="/2021/09/10/IDEA%20%E8%BF%9C%E7%A8%8Bdebug/"
+                                                 title="IDEA 远程debug">IDEA 远程debug</a>
+                    <div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span
+                            class="article-meta-label">发表于</span><time datetime="2021-09-10T01:21:00.000Z"
+                                                                       title="发表于 2021-09-10 09:21:00">2021-09-10</time></span>
+                    </div>
+                    <div class="content">IDEA 远程debug模式使用记录
+                        jar包启动时添加启动参数 端口号 8888为自己设置的
 
-1-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8888
+                        1-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8888
 
 
-
-例如：
-1java -jar -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8888 2333.jar --spring.profiles.active=dev
-
-
-
-IDEA具体配置如下图
-
-调试模式启动这个debug
- 其他的就和正常debug一样的
+                        例如：
+                        1java -jar -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8888 2333.jar
+                        --spring.profiles.active=dev
 
 
-参数解释：
+                        IDEA具体配置如下图
 
-JAVA支持调试功能，并提供了一个简单的调试工具JDB，其可支持设置断点及线程级的调试；
-
-各参数解释：
-
-
-  -Xdebug是通知JVM工作在DEBUG模式下
-  -Xrunjdwp是通知JVM使用(java debug wire protocol)来运行调试环境。该参数同时了一系列的调试选项：
-  transport指定了调试数据的传送方式，dt_socket是指用SOCKET模 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/03/10/%E6%B7%B1%E5%85%A5%E5%89%96%E6%9E%90%20MyBatis%20%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="深入剖析 MyBatis 核心原理 学习笔记">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深入剖析 MyBatis 核心原理 学习笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/03/10/%E6%B7%B1%E5%85%A5%E5%89%96%E6%9E%90%20MyBatis%20%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="深入剖析 MyBatis 核心原理 学习笔记">深入剖析 MyBatis 核心原理 学习笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-10T06:29:30.856Z" title="发表于 2021-03-10 14:29:30">2021-03-10</time></span></div><div class="content">深入剖析 MyBatis 核心原理 学习笔记MyBatis 架构简介MyBatis分为三层架构，分别是基础支撑层、核心处理层和接口层，如下图所示
-
-基础支撑层基础支撑层是整个MyBatis框架的地基，为整个MyBatis框架提供了非常基础的功能，其中每个模块都提供了一个内聚的、单一的能力，MyBatis基础支撑层按照这些单一功能可以划分为上图中的九个基础模块。
-1、类型转换模块mybatis-config.xml（MyBatis配置文件）中通过 &lt;typeAliase&gt; 标签为一个类定义一个别名，这里用到的“别名机制”就是由MyBatis基础支撑层中的类型转换模块实现的。
-
-以下是 mybatis-config.xml 配置文件的示例
-
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879&lt;!--2333--&gt;&lt;c ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/03/10/List%E9%9B%86%E5%90%88%E7%B1%BB/" title="List集合">     <img class="post_bg" src="/img/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A52k%E5%A3%81%E7%BA%B8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="List集合"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/03/10/List%E9%9B%86%E5%90%88%E7%B1%BB/" title="List集合">List集合</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-10T03:26:00.000Z" title="发表于 2021-03-10 11:26:00">2021-03-10</time></span></div><div class="content">线程安全问题线程安全就是多线程访问时，采用了加锁机制，当一个线程访问该类的某个数据时，进行保护，其他线程不能进行访问直到该线程读取完，其他线程才可使用。不会出现数据不一致或者数据污染。
-线程不安全就是不提供数据访问保护，有可能出现多个线程先后更改数据造成所得到的数据是脏数据。
-</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/03/03/String%E7%B1%BB%E5%9E%8B%E4%B8%AD%20==%E5%92%8Cequals%E6%AF%94%E8%BE%83%E7%9A%84%E5%B7%AE%E5%88%AB/" title="String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别">     <img class="post_bg" src="/img/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A52k%E5%A3%81%E7%BA%B8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/03/03/String%E7%B1%BB%E5%9E%8B%E4%B8%AD%20==%E5%92%8Cequals%E6%AF%94%E8%BE%83%E7%9A%84%E5%B7%AE%E5%88%AB/" title="String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别">String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-03T08:43:31.757Z" title="发表于 2021-03-03 16:43:31">2021-03-03</time></span></div><div class="content">
-先说明一下String类型的变量的创建方式
-在创建新的String类型的变量时,首先会在缓冲区查找是否有这个产量对应的对象,有就直接将找到的对象的地址赋给新创建的变量,没有就重新创建一个对象,然后赋给新创建的变量
-1234567891011String str = &quot;str&quot;;//创建一个新的String类型的变量,在已有的缓冲区中没有就重新创建一个String str1 = &quot;str&quot;;//创建时在缓冲区发现有和即将创建的值一样的对象,就将str的地址赋给str1str == str1;//trueString str2 = new String(&quot;str&quot;);//强制创建一个对象str2,地址和str,str1不同str2 == str;//false因为==比较的是对象的地址,而二者地址不同,故为falsestr2 == str1;//false同上  str2.equals(str1);//true  String继承Object方法中的equals方法进行重写,内部比较是两个String类型的字符串一个一个字符的比 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/03/03/hello-world/" title="Hello World">     <img class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/03/03/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-03T08:43:31.754Z" title="发表于 2021-03-03 16:43:31">2021-03-03</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
-
-More info: Writing
-Run server1$ hexo server
-
-More info: Server
-Generate static files1$ hexo generate
-
-More info: Generating
-Deploy to remote sites1$ hexo deploy
-
-More info: Deployment
-</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2020/12/02/Java%E5%AE%9E%E7%8E%B0%20Oracle%20decode%E5%87%BD%E6%95%B0%20%E8%BD%AC%E6%8D%A2%E4%B8%BA%20MySQL%20%E5%8F%AF%E7%94%A8%E7%9A%84%20case%20when/" title="Java实现 Oracle decode函数 转换为 MySQL 可用的 case when">     <img class="post_bg" src="/img/%E5%BC%A0%E4%BC%9F-%E8%AF%B7%E5%9D%90.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java实现 Oracle decode函数 转换为 MySQL 可用的 case when"></a></div><div class="recent-post-info"><a class="article-title" href="/2020/12/02/Java%E5%AE%9E%E7%8E%B0%20Oracle%20decode%E5%87%BD%E6%95%B0%20%E8%BD%AC%E6%8D%A2%E4%B8%BA%20MySQL%20%E5%8F%AF%E7%94%A8%E7%9A%84%20case%20when/" title="Java实现 Oracle decode函数 转换为 MySQL 可用的 case when">Java实现 Oracle decode函数 转换为 MySQL 可用的 case when</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-02T07:46:00.000Z" title="发表于 2020-12-02 15:46:00">2020-12-02</time></span></div><div class="content">
-具体实现思路
-首先要确认sql中没有包含decode的字符串或者字段  有的话可以自行替代后再做操作先获取 decode的位置 然后截取出 decode括号内的部分  通过计算左右括号的数量即可截取出来然后再将 decode括号内的部分分为4段  然后拼接回原来的SQL  重复循环执行即可
+                        调试模式启动这个debug
+                        其他的就和正常debug一样的
 
 
+                        参数解释：
 
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455private static String decodeTransformToCaseWhen(String sql) &#123;    /**     * 将decode的各部分分分别存储  最后拼接     */    List&lt;String&gt; strings = new ArrayList&lt;&gt;();    StringBuilder result = new StringBuilder(&quot; ( case &quot; + strings.get(0)  ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">浅言</div><div class="author-info__description">2333</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/qianyoo"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/qianyoo" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">Simple blog.</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/09/10/IDEA%20%E8%BF%9C%E7%A8%8Bdebug/" title="IDEA 远程debug"><img src="/img/%E5%BC%A0%E4%BC%9F-%E8%AF%B7%E5%9D%90.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IDEA 远程debug"/></a><div class="content"><a class="title" href="/2021/09/10/IDEA%20%E8%BF%9C%E7%A8%8Bdebug/" title="IDEA 远程debug">IDEA 远程debug</a><time datetime="2021-09-10T01:21:00.000Z" title="发表于 2021-09-10 09:21:00">2021-09-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/10/%E6%B7%B1%E5%85%A5%E5%89%96%E6%9E%90%20MyBatis%20%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="深入剖析 MyBatis 核心原理 学习笔记"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深入剖析 MyBatis 核心原理 学习笔记"/></a><div class="content"><a class="title" href="/2021/03/10/%E6%B7%B1%E5%85%A5%E5%89%96%E6%9E%90%20MyBatis%20%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="深入剖析 MyBatis 核心原理 学习笔记">深入剖析 MyBatis 核心原理 学习笔记</a><time datetime="2021-03-10T06:29:30.856Z" title="发表于 2021-03-10 14:29:30">2021-03-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/10/List%E9%9B%86%E5%90%88%E7%B1%BB/" title="List集合"><img src="/img/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A52k%E5%A3%81%E7%BA%B8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="List集合"/></a><div class="content"><a class="title" href="/2021/03/10/List%E9%9B%86%E5%90%88%E7%B1%BB/" title="List集合">List集合</a><time datetime="2021-03-10T03:26:00.000Z" title="发表于 2021-03-10 11:26:00">2021-03-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/03/String%E7%B1%BB%E5%9E%8B%E4%B8%AD%20==%E5%92%8Cequals%E6%AF%94%E8%BE%83%E7%9A%84%E5%B7%AE%E5%88%AB/" title="String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别"><img src="/img/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A52k%E5%A3%81%E7%BA%B8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别"/></a><div class="content"><a class="title" href="/2021/03/03/String%E7%B1%BB%E5%9E%8B%E4%B8%AD%20==%E5%92%8Cequals%E6%AF%94%E8%BE%83%E7%9A%84%E5%B7%AE%E5%88%AB/" title="String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别">String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别</a><time datetime="2021-03-03T08:43:31.757Z" title="发表于 2021-03-03 16:43:31">2021-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/03/hello-world/" title="Hello World"><img src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2021/03/03/hello-world/" title="Hello World">Hello World</a><time datetime="2021-03-03T08:43:31.754Z" title="发表于 2021-03-03 16:43:31">2021-03-03</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/IDEA/" style="font-size: 1.1em; color: #999">IDEA</a> <a href="/tags/Java/" style="font-size: 1.5em; color: #99a9bf">Java</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">6</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2022-12-13T14:50:14.975Z"></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-12-13T14:50:14.975Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 浅言</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+                        JAVA支持调试功能，并提供了一个简单的调试工具JDB，其可支持设置断点及线程级的调试；
+
+                        各参数解释：
+
+
+                        -Xdebug是通知JVM工作在DEBUG模式下
+                        -Xrunjdwp是通知JVM使用(java debug wire protocol)来运行调试环境。该参数同时了一系列的调试选项：
+                        transport指定了调试数据的传送方式，dt_socket是指用SOCKET模 ...
+                    </div>
+                </div>
+            </div>
+            <div class="recent-post-item">
+                <div class="post_cover right_radius"><a
+                        href="/2021/03/10/%E6%B7%B1%E5%85%A5%E5%89%96%E6%9E%90%20MyBatis%20%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                        title="深入剖析 MyBatis 核心原理 学习笔记"> <img class="post_bg"
+                                                             src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"
+                                                             onerror="this.onerror=null;this.src='/img/404.jpg'"
+                                                             alt="深入剖析 MyBatis 核心原理 学习笔记"></a></div>
+                <div class="recent-post-info"><a class="article-title"
+                                                 href="/2021/03/10/%E6%B7%B1%E5%85%A5%E5%89%96%E6%9E%90%20MyBatis%20%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                                                 title="深入剖析 MyBatis 核心原理 学习笔记">深入剖析 MyBatis 核心原理 学习笔记</a>
+                    <div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span
+                            class="article-meta-label">发表于</span><time datetime="2021-03-10T06:29:30.856Z"
+                                                                       title="发表于 2021-03-10 14:29:30">2021-03-10</time></span>
+                    </div>
+                    <div class="content">深入剖析 MyBatis 核心原理 学习笔记MyBatis 架构简介MyBatis分为三层架构，分别是基础支撑层、核心处理层和接口层，如下图所示
+
+                        基础支撑层基础支撑层是整个MyBatis框架的地基，为整个MyBatis框架提供了非常基础的功能，其中每个模块都提供了一个内聚的、单一的能力，MyBatis基础支撑层按照这些单一功能可以划分为上图中的九个基础模块。
+                        1、类型转换模块mybatis-config.xml（MyBatis配置文件）中通过 &lt;typeAliase&gt;
+                        标签为一个类定义一个别名，这里用到的“别名机制”就是由MyBatis基础支撑层中的类型转换模块实现的。
+
+                        以下是 mybatis-config.xml 配置文件的示例
+
+                        12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879&lt;!--2333--&gt;&lt;c
+                        ...
+                    </div>
+                </div>
+            </div>
+            <div class="recent-post-item">
+                <div class="post_cover left_radius"><a href="/2021/03/10/List%E9%9B%86%E5%90%88%E7%B1%BB/"
+                                                       title="List集合"> <img class="post_bg"
+                                                                            src="/img/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A52k%E5%A3%81%E7%BA%B8.jpg"
+                                                                            onerror="this.onerror=null;this.src='/img/404.jpg'"
+                                                                            alt="List集合"></a></div>
+                <div class="recent-post-info"><a class="article-title"
+                                                 href="/2021/03/10/List%E9%9B%86%E5%90%88%E7%B1%BB/" title="List集合">List集合</a>
+                    <div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span
+                            class="article-meta-label">发表于</span><time datetime="2021-03-10T03:26:00.000Z"
+                                                                       title="发表于 2021-03-10 11:26:00">2021-03-10</time></span>
+                    </div>
+                    <div class="content">
+                        线程安全问题线程安全就是多线程访问时，采用了加锁机制，当一个线程访问该类的某个数据时，进行保护，其他线程不能进行访问直到该线程读取完，其他线程才可使用。不会出现数据不一致或者数据污染。
+                        线程不安全就是不提供数据访问保护，有可能出现多个线程先后更改数据造成所得到的数据是脏数据。
+                    </div>
+                </div>
+            </div>
+            <div class="recent-post-item">
+                <div class="post_cover right_radius"><a
+                        href="/2021/03/03/String%E7%B1%BB%E5%9E%8B%E4%B8%AD%20==%E5%92%8Cequals%E6%AF%94%E8%BE%83%E7%9A%84%E5%B7%AE%E5%88%AB/"
+                        title="String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别"> <img class="post_bg"
+                                                                                       src="/img/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A52k%E5%A3%81%E7%BA%B8.jpg"
+                                                                                       onerror="this.onerror=null;this.src='/img/404.jpg'"
+                                                                                       alt="String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别"></a>
+                </div>
+                <div class="recent-post-info"><a class="article-title"
+                                                 href="/2021/03/03/String%E7%B1%BB%E5%9E%8B%E4%B8%AD%20==%E5%92%8Cequals%E6%AF%94%E8%BE%83%E7%9A%84%E5%B7%AE%E5%88%AB/"
+                                                 title="String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别">String类型中
+                    &quot;==&quot;和&quot;equals&quot;比较的差别</a>
+                    <div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span
+                            class="article-meta-label">发表于</span><time datetime="2021-03-03T08:43:31.757Z"
+                                                                       title="发表于 2021-03-03 16:43:31">2021-03-03</time></span>
+                    </div>
+                    <div class="content">
+                        先说明一下String类型的变量的创建方式
+                        在创建新的String类型的变量时,首先会在缓冲区查找是否有这个产量对应的对象,有就直接将找到的对象的地址赋给新创建的变量,没有就重新创建一个对象,然后赋给新创建的变量
+                        1234567891011String str = &quot;str&quot;;//创建一个新的String类型的变量,在已有的缓冲区中没有就重新创建一个String str1 =
+                        &quot;str&quot;;//创建时在缓冲区发现有和即将创建的值一样的对象,就将str的地址赋给str1str == str1;//trueString str2 = new
+                        String(&quot;str&quot;);//强制创建一个对象str2,地址和str,str1不同str2 ==
+                        str;//false因为==比较的是对象的地址,而二者地址不同,故为falsestr2 == str1;//false同上 str2.equals(str1);//true
+                        String继承Object方法中的equals方法进行重写,内部比较是两个String类型的字符串一个一个字符的比 ...
+                    </div>
+                </div>
+            </div>
+            <div class="recent-post-item">
+                <div class="post_cover left_radius"><a href="/2021/03/03/hello-world/" title="Hello World"> <img
+                        class="post_bg" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"
+                        onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div>
+                <div class="recent-post-info"><a class="article-title" href="/2021/03/03/hello-world/"
+                                                 title="Hello World">Hello World</a>
+                    <div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span
+                            class="article-meta-label">发表于</span><time datetime="2021-03-03T08:43:31.754Z"
+                                                                       title="发表于 2021-03-03 16:43:31">2021-03-03</time></span>
+                    </div>
+                    <div class="content">Welcome to Hexo! This is your very first post. Check documentation for more
+                        info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you
+                        can ask me on GitHub.
+                        Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+                        More info: Writing
+                        Run server1$ hexo server
+
+                        More info: Server
+                        Generate static files1$ hexo generate
+
+                        More info: Generating
+                        Deploy to remote sites1$ hexo deploy
+
+                        More info: Deployment
+                    </div>
+                </div>
+            </div>
+            <div class="recent-post-item">
+                <div class="post_cover right_radius"><a
+                        href="/2020/12/02/Java%E5%AE%9E%E7%8E%B0%20Oracle%20decode%E5%87%BD%E6%95%B0%20%E8%BD%AC%E6%8D%A2%E4%B8%BA%20MySQL%20%E5%8F%AF%E7%94%A8%E7%9A%84%20case%20when/"
+                        title="Java实现 Oracle decode函数 转换为 MySQL 可用的 case when"> <img class="post_bg"
+                                                                                     src="/img/%E5%BC%A0%E4%BC%9F-%E8%AF%B7%E5%9D%90.jpg"
+                                                                                     onerror="this.onerror=null;this.src='/img/404.jpg'"
+                                                                                     alt="Java实现 Oracle decode函数 转换为 MySQL 可用的 case when"></a>
+                </div>
+                <div class="recent-post-info"><a class="article-title"
+                                                 href="/2020/12/02/Java%E5%AE%9E%E7%8E%B0%20Oracle%20decode%E5%87%BD%E6%95%B0%20%E8%BD%AC%E6%8D%A2%E4%B8%BA%20MySQL%20%E5%8F%AF%E7%94%A8%E7%9A%84%20case%20when/"
+                                                 title="Java实现 Oracle decode函数 转换为 MySQL 可用的 case when">Java实现 Oracle
+                    decode函数 转换为 MySQL 可用的 case when</a>
+                    <div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span
+                            class="article-meta-label">发表于</span><time datetime="2020-12-02T07:46:00.000Z"
+                                                                       title="发表于 2020-12-02 15:46:00">2020-12-02</time></span>
+                    </div>
+                    <div class="content">
+                        具体实现思路
+                        首先要确认sql中没有包含decode的字符串或者字段 有的话可以自行替代后再做操作先获取 decode的位置 然后截取出 decode括号内的部分 通过计算左右括号的数量即可截取出来然后再将
+                        decode括号内的部分分为4段 然后拼接回原来的SQL 重复循环执行即可
+
+
+                        12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455private
+                        static String decodeTransformToCaseWhen(String sql) &#123; /** * 将decode的各部分分分别存储 最后拼接 */ List&lt;String&gt;
+                        strings = new ArrayList&lt;&gt;(); StringBuilder result = new StringBuilder(&quot; ( case &quot;
+                        + strings.get(0) ...
+                    </div>
+                </div>
+            </div>
+            <nav id="pagination">
+                <div class="pagination"><span class="page-number current">1</span></div>
+            </nav>
+        </div>
+        <div class="aside-content" id="aside-content">
+            <div class="card-widget card-info">
+                <div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.png"
+                                                             onerror="this.onerror=null;this.src='/img/friend_404.gif'"
+                                                             alt="avatar"/>
+                    <div class="author-info__name">浅言</div>
+                    <div class="author-info__description">2333</div>
+                </div>
+                <div class="card-info-data">
+                    <div class="card-info-data-item is-center"><a href="/archives/">
+                        <div class="headline">文章</div>
+                        <div class="length-num">6</div>
+                    </a></div>
+                    <div class="card-info-data-item is-center"><a href="/tags/">
+                        <div class="headline">标签</div>
+                        <div class="length-num">2</div>
+                    </a></div>
+                </div>
+                <a class="button--animated" id="card-info-btn" target="_blank" rel="noopener"
+                   href="https://github.com/qianyoo"><i class="fab fa-github"></i><span>关注我</span></a>
+                <div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/qianyoo"
+                                                                 target="_blank" title="Github"><i
+                        class="fab fa-github"></i></a></div>
+            </div>
+            <div class="card-widget card-announcement">
+                <div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span>
+                </div>
+                <div class="announcement_content">Simple blog.</div>
+            </div>
+            <div class="sticky_layout">
+                <div class="card-widget card-recent-post">
+                    <div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div>
+                    <div class="aside-list">
+                        <div class="aside-list-item"><a class="thumbnail"
+                                                        href="/2021/09/10/IDEA%20%E8%BF%9C%E7%A8%8Bdebug/"
+                                                        title="IDEA 远程debug"><img
+                                src="/img/%E5%BC%A0%E4%BC%9F-%E8%AF%B7%E5%9D%90.jpg"
+                                onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IDEA 远程debug"/></a>
+                            <div class="content"><a class="title" href="/2021/09/10/IDEA%20%E8%BF%9C%E7%A8%8Bdebug/"
+                                                    title="IDEA 远程debug">IDEA 远程debug</a>
+                                <time datetime="2021-09-10T01:21:00.000Z" title="发表于 2021-09-10 09:21:00">2021-09-10
+                                </time>
+                            </div>
+                        </div>
+                        <div class="aside-list-item"><a class="thumbnail"
+                                                        href="/2021/03/10/%E6%B7%B1%E5%85%A5%E5%89%96%E6%9E%90%20MyBatis%20%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                                                        title="深入剖析 MyBatis 核心原理 学习笔记"><img
+                                src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"
+                                onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深入剖析 MyBatis 核心原理 学习笔记"/></a>
+                            <div class="content"><a class="title"
+                                                    href="/2021/03/10/%E6%B7%B1%E5%85%A5%E5%89%96%E6%9E%90%20MyBatis%20%E6%A0%B8%E5%BF%83%E5%8E%9F%E7%90%86%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                                                    title="深入剖析 MyBatis 核心原理 学习笔记">深入剖析 MyBatis 核心原理 学习笔记</a>
+                                <time datetime="2021-03-10T06:29:30.856Z" title="发表于 2021-03-10 14:29:30">2021-03-10
+                                </time>
+                            </div>
+                        </div>
+                        <div class="aside-list-item"><a class="thumbnail"
+                                                        href="/2021/03/10/List%E9%9B%86%E5%90%88%E7%B1%BB/"
+                                                        title="List集合"><img
+                                src="/img/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A52k%E5%A3%81%E7%BA%B8.jpg"
+                                onerror="this.onerror=null;this.src='/img/404.jpg'" alt="List集合"/></a>
+                            <div class="content"><a class="title" href="/2021/03/10/List%E9%9B%86%E5%90%88%E7%B1%BB/"
+                                                    title="List集合">List集合</a>
+                                <time datetime="2021-03-10T03:26:00.000Z" title="发表于 2021-03-10 11:26:00">2021-03-10
+                                </time>
+                            </div>
+                        </div>
+                        <div class="aside-list-item"><a class="thumbnail"
+                                                        href="/2021/03/03/String%E7%B1%BB%E5%9E%8B%E4%B8%AD%20==%E5%92%8Cequals%E6%AF%94%E8%BE%83%E7%9A%84%E5%B7%AE%E5%88%AB/"
+                                                        title="String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别"><img
+                                src="/img/%E5%88%9D%E9%9F%B3%E6%9C%AA%E6%9D%A52k%E5%A3%81%E7%BA%B8.jpg"
+                                onerror="this.onerror=null;this.src='/img/404.jpg'"
+                                alt="String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别"/></a>
+                            <div class="content"><a class="title"
+                                                    href="/2021/03/03/String%E7%B1%BB%E5%9E%8B%E4%B8%AD%20==%E5%92%8Cequals%E6%AF%94%E8%BE%83%E7%9A%84%E5%B7%AE%E5%88%AB/"
+                                                    title="String类型中 &quot;==&quot;和&quot;equals&quot;比较的差别">String类型中
+                                &quot;==&quot;和&quot;equals&quot;比较的差别</a>
+                                <time datetime="2021-03-03T08:43:31.757Z" title="发表于 2021-03-03 16:43:31">2021-03-03
+                                </time>
+                            </div>
+                        </div>
+                        <div class="aside-list-item"><a class="thumbnail" href="/2021/03/03/hello-world/"
+                                                        title="Hello World"><img
+                                src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/img/default.jpg"
+                                onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a>
+                            <div class="content"><a class="title" href="/2021/03/03/hello-world/" title="Hello World">Hello
+                                World</a>
+                                <time datetime="2021-03-03T08:43:31.754Z" title="发表于 2021-03-03 16:43:31">2021-03-03
+                                </time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-widget card-tags">
+                    <div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div>
+                    <div class="card-tag-cloud"><a href="/tags/IDEA/" style="font-size: 1.1em; color: #999">IDEA</a> <a
+                            href="/tags/Java/" style="font-size: 1.5em; color: #99a9bf">Java</a></div>
+                </div>
+                <div class="card-widget card-archives">
+                    <div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div>
+                    <ul class="card-archive-list">
+                        <li class="card-archive-list-item"><a class="card-archive-list-link"
+                                                              href="/archives/2021/09/"><span
+                                class="card-archive-list-date">九月 2021</span><span
+                                class="card-archive-list-count">1</span></a></li>
+                        <li class="card-archive-list-item"><a class="card-archive-list-link"
+                                                              href="/archives/2021/03/"><span
+                                class="card-archive-list-date">三月 2021</span><span
+                                class="card-archive-list-count">4</span></a></li>
+                        <li class="card-archive-list-item"><a class="card-archive-list-link"
+                                                              href="/archives/2020/12/"><span
+                                class="card-archive-list-date">十二月 2020</span><span
+                                class="card-archive-list-count">1</span></a></li>
+                    </ul>
+                </div>
+                <div class="card-widget card-webinfo">
+                    <div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div>
+                    <div class="webinfo">
+                        <div class="webinfo-item">
+                            <div class="item-name">文章数目 :</div>
+                            <div class="item-count">6</div>
+                        </div>
+                        <div class="webinfo-item">
+                            <div class="item-name">已运行时间 :</div>
+                            <div class="item-count" id="runtimeshow" data-publishDate="2022-12-13T14:50:14.975Z"></div>
+                        </div>
+                        <div class="webinfo-item">
+                            <div class="item-name">本站访客数 :</div>
+                            <div class="item-count" id="busuanzi_value_site_uv"></div>
+                        </div>
+                        <div class="webinfo-item">
+                            <div class="item-name">本站总访问量 :</div>
+                            <div class="item-count" id="busuanzi_value_site_pv"></div>
+                        </div>
+                        <div class="webinfo-item">
+                            <div class="item-name">最后更新时间 :</div>
+                            <div class="item-count" id="last-push-date"
+                                 data-lastPushDate="2022-12-13T14:50:14.975Z"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div id="footer-wrap">
+            <div class="copyright"><div class="sprite bg2" style="width: 18px;height: 20px"></div><a href="https://www.beian.gov.cn/">津ICP备19002329号-2</a></div>
+            <div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener"
+                                                           href="https://hexo.io">Hexo</a><span
+                    class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener"
+                                                                        href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<div id="rightside">
+    <div id="rightside-config-hide">
+        <button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button>
+        <button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button>
+    </div>
+    <div id="rightside-config-show">
+        <button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button>
+        <button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button>
+    </div>
+</div>
+<div>
+    <script src="/js/utils.js"></script>
+    <script src="/js/main.js"></script>
+    <div class="js-pjax"></div>
+    <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+</div>
+</body>
+</html>
